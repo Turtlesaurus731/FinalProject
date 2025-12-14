@@ -20,6 +20,12 @@ public class Address {
         QC, ON, NS, PEI, BC, AB, SK, MB, NB, NL
     }
 
+    /**
+     * Check if the postal code is valid.
+     * (is 6 characters long and follows the CDCDCD format where C == a letter and D == a digit)
+     * @param postalCode the postal code that is to be checked
+     * @return [True] if valid, otherwise [False]
+     */
     public static boolean isPostalCodeValid(String postalCode) {
         if (postalCode == null || postalCode.length() != 6) {
             return false;
