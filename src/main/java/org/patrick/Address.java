@@ -24,7 +24,6 @@ public class Address {
         if (postalCode == null || postalCode.length() != 6) {
             return false;
         }
-        // arrays maybe? man why am I sick right now  ;v; MY HEAD HURTS AAA god colds suck ._.
         char[] chars = postalCode.toCharArray();
 
         for (int i = 0; i < postalCode.length(); i++) {
@@ -35,24 +34,10 @@ public class Address {
                 return false;
             }
         }
-        /*
-        for (int i = 0; i < postalCode.length(); i++) {
-            if (i % 2 == 0) {
-                if (!Character.isLetter(chars[i])) {
-                    return false;
-                }
-            } else {
-                if (!Character.isDigit(chars[i])) {
-                    return false;
-                }
-            }
-        }
-         */
         return true;
     }
 
     public Address(int streetNo, String street, String city, Province province, String postalCode) {
-
         if (isPostalCodeValid(postalCode)) {
             this.streetNo = streetNo;
             this.street = street;
