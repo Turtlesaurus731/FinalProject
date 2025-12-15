@@ -51,6 +51,7 @@ public class Address {
             this.province = province;
             this.postalCode = postalCode.toUpperCase();
         } else {
+            this.streetNo = 0;
             this.street = null;
             this.city = null;
             this.province = null;

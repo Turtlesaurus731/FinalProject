@@ -99,7 +99,7 @@ public class Course {
     /**
      * Generate random scores for all assignments and students
      */
-    public void generateScroes(){
+    public void generateScores(){
         for (Assignment a : assignments) {
             a.generateRandomScore();
         }
@@ -134,7 +134,7 @@ public class Course {
 
         for (int i = 0; i < registeredStudents.size(); i++) {
             Student s = registeredStudents.get(i);
-            System.out.printf("%-20s", s.getScores().get(i));
+            System.out.printf("%-20s", s.getStudentName());
 
             for (Assignment a : assignments) {
                 Integer score = a.getScores().get(i);
@@ -178,7 +178,7 @@ public class Course {
                 ", credits=" + credits +
                 ", department=" + department +
                 ", assignments=" + assignments +
-                ", registeredStudents=" + registeredStudents +
+                ", registeredStudents=" + registeredStudents1 +
                 ", assignmentWeightsValid" + isAssignmentWeightValid() +
                 '}';
     }
